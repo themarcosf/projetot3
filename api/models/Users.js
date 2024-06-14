@@ -31,6 +31,10 @@ module.exports = {
     },
   },
 
+  novo: async (values) => {
+    await Users.create(values);
+  },
+
   beforeCreate: async (values, proceed) => {
     values.id = uuidv4();
     return proceed();
